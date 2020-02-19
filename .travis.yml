@@ -8,5 +8,5 @@ script:
   - chmod 400 friedswet_aws.pem
   - ssh-keyscan -H 3.136.114.92 >> ~/.ssh/known_hosts
   - ssh-keyscan -H ec2-3-136-114-92.us-east-2.compute.amazonaws.com >> ~/.ssh/known_hosts
-  - ssh -i friedswet_aws.pem ubuntu@3.136.114.92 "rm -rf /var/lib/tomcat8/webapps/Netflix*"
+  # - ssh -i friedswet_aws.pem ubuntu@3.136.114.92 "rm -rf /var/lib/tomcat8/webapps/Netflix*"
   - scp -i friedswet_aws.pem target/*.war ubuntu@3.136.114.92:/var/lib/tomcat8/webapps/Netflix.war
